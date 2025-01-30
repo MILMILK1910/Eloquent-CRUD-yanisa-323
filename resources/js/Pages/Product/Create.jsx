@@ -2,7 +2,6 @@ import { useForm } from '@inertiajs/react';
 import React from 'react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
-import FlashMessage from '@/Components/FlashMessage';
 import { usePage } from '@inertiajs/react';
 
 const CreateProductStore = () => {
@@ -27,7 +26,6 @@ const CreateProductStore = () => {
                 </h2>
             }>
             <Head title="Create Product Store" />
-            <FlashMessage flash={flash} />
             <div className="py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
                     <h2 className="text-2xl font-bold mb-6">Create</h2>
