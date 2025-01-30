@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\DB;
 
 class ProductStoreController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         $products = ProductStore::paginate(20);
@@ -25,22 +23,15 @@ class ProductStoreController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return Inertia::render('Product/Create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         Log::info($request->all());
 
-        // Validate the request
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'amount' => 'required|numeric|min:100',
@@ -57,17 +48,13 @@ class ProductStoreController extends Controller
         return redirect()->route('productstores.index')->with('success', 'Product created successfully');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(ProductStore $productStore)
     {
-        //
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit($id)
     {
 

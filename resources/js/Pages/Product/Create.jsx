@@ -2,7 +2,6 @@ import { useForm } from '@inertiajs/react';
 import React from 'react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
-import { usePage } from '@inertiajs/react';
 
 const CreateProductStore = () => {
     const { data, setData, post, errors } = useForm({
@@ -16,7 +15,6 @@ const CreateProductStore = () => {
         post('/productstores');
     };
 
-    const { flash } = usePage().props;
 
     return (
         <AuthenticatedLayout

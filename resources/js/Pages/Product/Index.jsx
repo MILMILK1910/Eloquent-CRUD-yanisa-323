@@ -94,6 +94,7 @@ export default function Index({ products }) {
         return paginationLinks;
     };
 
+    //สำหรับลบข้อมูล
     const handleDelete = (id) => {
         if (confirm('Are you sure you want to delete this product?')) {
             router.delete(`/productstores/${id}`, {
